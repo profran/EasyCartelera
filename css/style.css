@@ -1,0 +1,105 @@
+/*
+* {
+	border: 1px solid red !important;	
+}
+*/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	align-items: center;
+	height: 100vh;
+	max-height: 100%;
+	margin: 0;
+}
+
+body {
+	align-items: center;
+	max-height: inherit;
+	height: inherit;
+	margin: 0;
+}
+
+i.icon-white {
+    color: white;
+}
+
+.grid {
+	/*
+	border: 1px solid blue !important;
+	*/
+	margin: 0;
+	width: 100%;
+	max-height: inherit;
+	height: inherit;
+}
+
+.row {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	height: auto;
+	max-height: inherit;
+}
+
+.col {
+	max-height: inherit;
+}
+
+.reference {
+	margin: 0;
+	padding: 0;
+	width: 8%;
+	height: 100%;
+	border-left: 1px solid white !important;
+}
+
+.one-quarter-width {
+	width: 25%;
+}
+
+.three-quarter-width {
+	width: 75%
+}
+
+.one-third-width {
+	width: 33.33%
+}
+
+.two-third-width {
+	width: 66.67%
+}
+
+.full-height {
+	height: 100%;	
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+#img_main_logo {
+	width: 60%;
+	height: inherit;
+}
+
+#div_card_box {
+	padding: 3px;
+	background: rgb(236, 239, 241);
+}
+
+#div_main_top {
+	height: 10%;
+	background: rgb(26, 35, 126);
+}
+
+#div_main_references {
+	height: 100%;
+	width: 90%;
+	margin: 0;
+}
