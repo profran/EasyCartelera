@@ -25,7 +25,7 @@ body {
 }
 
 i.icon-white {
-    color: white;
+	color: white;
 }
 
 .grid {
@@ -53,7 +53,6 @@ i.icon-white {
 .reference {
 	margin: 0;
 	padding: 0;
-	width: 8%;
 	height: 100%;
 	border-left: 1px solid white !important;
 }
@@ -90,16 +89,10 @@ i.icon-white {
 
 #div_card_box {
 	padding: 3px;
-	background: rgb(236, 239, 241);
+	overflow: auto;
 }
 
-#div_main_top {
-	height: 10%;
-	background: rgb(26, 35, 126);
-}
-
-#div_main_references {
-	height: 100%;
-	width: 90%;
-	margin: 0;
+#div_main_map {
+	width: 100%;
+	padding: 0;
 }
