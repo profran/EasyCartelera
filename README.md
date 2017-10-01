@@ -13,4 +13,4 @@
 
 ## Known issues:
 
-- Body overflows html parent.
+- JSON won't load locally.
