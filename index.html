@@ -24,11 +24,13 @@
 
 		<script type="text/javascript" src="js/materialize.min.js"></script>
 
+		<script src="js/map.js" type="text/javascript"></script>
+
 		<nav>
 
 			<div class="nav-wrapper teal darken-3">
 
-				<a href="#" class="brand-logo"><img id="img_main_logo" src="media/movie_logo.png"></a>
+				<a href="#" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
 
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 
@@ -56,31 +58,34 @@
 
 					<div class="col s12">
 
-					  <div class="card">
+					  <div class="card hoverable">
 
 						<div class="card-image">
 
 						  	<img src="media/logoDinosaurio.jpg
 						  ">
-						  	<span class="card-title">Card Title</span>
+						  	<span class="card-title">Cines Dinosaurio</span>
 
 						</div>
 
 						<div class="card-content">
 
-						  <p>I am a very simple card. I am good at containing small bits of information.
-						  I am convenient because I require little markup to use effectively.</p>
+						  <p> Ubicado en Rodriguez del Busto, ofrece muy buenas comodidades y una alta resolucion de imagen por un precio accesible.
+						  </p>
 
 						</div>
 
 						<div class="card-action">
 
-						    <a href="#">This is a link</a>
+						    <a href="www.cinesdinomall.com.ar">Pagina Web</a>
 
 						</div>
 
 					  </div>
 
+					  <a class="waves-effect waves-light btn" onclick="addMarkersFromList([[-30.421632,-64.186935], [-31.421632,-64.186935], [-32.421632,-64.186935]])">Add Marker</a>
+
+					  <a class="waves-effect waves-light btn" onclick="init()">Add Marker</a>
 					</div>
 
 				  </div>
@@ -90,7 +95,6 @@
 				<div id="div_main_map" class="col s9">
 
 					<div id="map"></div>				
-					<script src="js/map.js" type="text/javascript"></script>
 					<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
 				</div>

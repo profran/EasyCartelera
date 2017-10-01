@@ -35,7 +35,7 @@ i.icon-white {
 	margin: 0;
 	width: 100%;
 	max-height: inherit;
-	height: inherit;
+	height: calc(100% - 64px);
 }
 
 .row {
@@ -95,4 +95,8 @@ i.icon-white {
 #div_main_map {
 	width: 100%;
 	padding: 0;
+}
+
+#div_main_info {
+	margin: 0px;
 }
