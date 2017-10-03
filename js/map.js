@@ -10,7 +10,7 @@ function myMap() {
     };
 
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
-	
+
 }
 
 function addMarkersFromList(LatLngList) {
@@ -24,16 +24,16 @@ function addMarkersFromList(LatLngList) {
 }
 
 function addMarker(Lat, Lng) {
-	
+
 	var marker = new google.maps.Marker({
     	position: new google.maps.LatLng(Lat,Lng),
     	map: map,
     	title: 'Hello World!'
   	});
-	
+
 }
 /*
-function loadJSON(callback) {   
+function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
@@ -44,7 +44,7 @@ function loadJSON(callback) {
             callback(xobj.responseText);
           }
     };
-    xobj.send(null);  
+    xobj.send(null);
 }
 
 function init() {

@@ -19,7 +19,7 @@ function createInfoCard(title="example", description = "", link = "#", image = "
 
 	var p = document.createElement("p");
 	p.appendChild(document.createTextNode(description));
-	
+
 	var card_action = document.createElement("div");
 	card_action.setAttribute("class", "card-action");
 
