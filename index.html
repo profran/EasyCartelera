@@ -13,6 +13,9 @@
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+	<title>EasyCartelera</title>
+	<link rel="shortcut icon" href="media/movie.png">
+
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -24,7 +27,7 @@
 
 		<div class="nav-wrapper teal darken-3">
 
-			<a href="#" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
+			<a href="home.html" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
 
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 
@@ -101,41 +104,7 @@
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script src="js/map.js" type="text/javascript"></script>
-<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
-<script type="text/javascript">
-// Initialize Firebase
-var config = {
-	apiKey: "AIzaSyAK-3br_mavmuruZrryh-Vidm0PPKqLxbI",
-	authDomain: "easycartelera.firebaseapp.com",
-	databaseURL: "https://easycartelera.firebaseio.com",
-	projectId: "easycartelera",
-	storageBucket: "easycartelera.appspot.com",
-	messagingSenderId: "703501126646"
-};
-firebase.initializeApp(config);
-</script>
-<script src="js/cards.js" type="text/javascript"></script>
-<script type="text/javascript">
-function mygoogle() {
-	var provider = new firebase.auth.GoogleAuthProvider();
-	firebase.auth().signInWithPopup(provider).then(function(result) {
-		// This gives you a Google Access Token. You can use it to access the Google API.
-		var token = result.credential.accessToken;
-		// The signed-in user info.
-		var user = result.user;
-		// ...
-	}).catch(function(error) {
-		// Handle Errors here.
-		var errorCode = error.code;
-		var errorMessage = error.message;
-		// The email of the user's account used.
-		var email = error.email;
-		// The firebase.auth.AuthCredential type that was used.
-		var credential = error.credential;
-		// ...
-	});
-}
-</script>
+
 
 </html>
