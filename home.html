@@ -4,53 +4,109 @@
   <meta charset="utf-8">
   <link href="css/style.css" type="text/css" rel="stylesheet">
   <!--Import Google Icon Font-->
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   <title>EasyCartelera</title>
-	<link rel="shortcut icon" href="media/movie.png">
-
+  <link rel="shortcut icon" href="media/movie.png">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 </head>
 <body>
   <nav>
-
     <div class="nav-wrapper teal darken-3">
-
       <a href="home.html" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
-
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-
         <li><a href="movieList.html"><i class="material-icons icon-white" style="font-size: 40px">format_list_bulleted</i></a></li>
-
         <li><a href="index.html"><i class="material-icons icon-white" style="font-size: 40px">map</i></a></li>
-
-        <li><a href="home.html"><i class="material-icons icon-white" style="font-size: 40px">home</i></a></li>
-
+        <li><a href="#"><i class="material-icons icon-white" style="font-size: 40px">home</i></a></li>
         <li><a href="account.html"><i class="material-icons icon-white" style="font-size: 40px">account_circle</i></a></li>
-
       </ul>
-
     </div>
-
   </nav>
   <div id="div_main_grid" class="grid">
-
-    <div id="div_main_info" class="row" style="height: 100%">
+    <div id="div_main_carousel" class="row">
       <!--<a href="" download>
-        <img src="/images/downloadbutton.jpg">
-      </a>-->
+      <img src="/images/downloadbutton.jpg"></a>-->
+      <div class="carousel carousel-slider center" data-indicators="true">
+        <!--<div class="carousel-fixed-item center">
+        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+      </div>-->
+      <div class="carousel-item teal darken-3 white-text" href="#one!">
+        <h2>Home section</h2>
+        <p class="white-text">This is the Home Section.</p>
+      </div>
+      <div class="carousel-item teal darken-2 white-text" href="#one!">
+        <h2>Home section</h2>
+        <p class="white-text">This is the Home Section.</p>
+      </div>
+      <div class="carousel-item teal darken-1 white-text" href="#one!">
+        <h2>Home section</h2>
+        <p class="white-text">This is the Home Section.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="card horizontal hoverable">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s6">
+      <div class="card horizontal hoverable">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s6">
+      <div class="card horizontal hoverable">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/nature/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<!--<script type="text/javascript" src="js/materialize.min.js"></script>-->
+<script type="text/javascript" src="js/materialize.js"></script>
+<script>
+/*
+$(document).ready(function(){
+$('.carousel').carousel();
+});
+*/
+$('.carousel.carousel-slider').carousel({fullWidth: true});
+</script>
 </html>
