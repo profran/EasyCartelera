@@ -131,94 +131,101 @@ function initApp() {
 			// ...
 
 			//getAnalizedData("/cities/test");
-
+			/*
 			var result = 0;
 
 			function getFirebaseData(endpoint){
-				return firebase.database().ref(endpoint).once("value", function(snapshot){
-					return snapshot.val();
-				});
-			}
+			return firebase.database().ref(endpoint).once("value", function(snapshot){
+			return snapshot.val();
+		});
+	}
 
-			function getResult(result) {
-				result = result;
-			}
+	function getResult(result) {
+	result = result;
+}
 
-			Promise.all([getFirebaseData("/cities/test")]).then(function(snapshots) {
-				result = snapshots[0].gn.it;
-				console.log(result);
-			});
+Promise.all([getFirebaseData("/cities/test")]).then(function(snapshots) {
+result = snapshots[0].gn.it;
+console.log(result);
+});
 
-			console.log(result);
+console.log(result);
+*/
 
-			//writeUserData(userId, "Francesco", "Silvetti", "17", "Male", "3513476196", "Obispo Moscoso y Peralta", "2971", "Comedy", firebase.auth().currentUser.photoURL);
-			if (photoURL != null) {
+//writeUserData(userId, "Francesco", "Silvetti", "17", "Male", "3513476196", "Obispo Moscoso y Peralta", "2971", "Comedy", firebase.auth().currentUser.photoURL);
+$("#div_main_info").load("/html-elements/profile.html");
 
-				var myNode = document.getElementById("li_account");
+if (photoURL != null) {
 
-				while (myNode.firstChild) {
-					myNode.removeChild(myNode.firstChild);
-				}
+	var myNode = document.getElementById("li_account");
+	myNode.setAttribute("style", "max-height: 64px");
 
-				var a = document.createElement("a");
-				a.setAttribute("href", "account.html");
-				a.setAttribute("style", "max-width: 10%");
+	while (myNode.firstChild) {
+		myNode.removeChild(myNode.firstChild);
+	}
 
-				var img = document.createElement("img");
-				img.setAttribute("class", "img-circle");
-				img.setAttribute("src", photoURL);
+	var a = document.createElement("a");
+	a.setAttribute("href", "account.html");
+	a.setAttribute("style", "max-height: 64px");
 
-				a.appendChild(img);
-				myNode.appendChild(a);
+	var img = document.createElement("img");
+	img.setAttribute("class", "img-circle");
+	img.setAttribute("src", photoURL);
 
-				console.log("photo change successful");
+	a.appendChild(img);
+	myNode.appendChild(a);
 
-			} else {
+	console.log("photo change successful");
 
-				var myNode = document.getElementById("li_account");
+} else {
 
-				while (myNode.firstChild) {
-					myNode.removeChild(myNode.firstChild);
-				}
+	var myNode = document.getElementById("li_account");
 
-				var a = document.createElement("a");
-				a.setAttribute("href", "account.html");
+	while (myNode.firstChild) {
+		myNode.removeChild(myNode.firstChild);
+	}
 
-				var i = document.createElement("i");
-				i.setAttribute("class", "material-icons icon-white");
-				i.setAttribute("style", "font-size: 40px");
-				i.appendChild(document.createTextNode("account_circle"));
+	var a = document.createElement("a");
+	a.setAttribute("href", "account.html");
 
-				a.appendChild(i);
-				myNode.appendChild(a);
+	var i = document.createElement("i");
+	i.setAttribute("class", "material-icons icon-white");
+	i.setAttribute("style", "font-size: 40px");
+	i.appendChild(document.createTextNode("account_circle"));
 
-				console.log("original icon successful");
+	a.appendChild(i);
+	myNode.appendChild(a);
 
-			}
+	console.log("original icon successful");
 
-		} else {
+}
 
-			var myNode = document.getElementById("li_account");
+} else {
 
-			while (myNode.firstChild) {
-				myNode.removeChild(myNode.firstChild);
-			}
+	var myNode = document.getElementById("li_account");
 
-			var a = document.createElement("a");
-			a.setAttribute("href", "account.html");
+	while (myNode.firstChild) {
+		myNode.removeChild(myNode.firstChild);
+	}
 
-			var i = document.createElement("i");
-			i.setAttribute("class", "material-icons icon-white");
-			i.setAttribute("style", "font-size: 40px");
-			i.appendChild(document.createTextNode("account_circle"));
+	var a = document.createElement("a");
+	a.setAttribute("href", "account.html");
 
-			a.appendChild(i);
-			myNode.appendChild(a);
+	var i = document.createElement("i");
+	i.setAttribute("class", "material-icons icon-white");
+	i.setAttribute("style", "font-size: 40px");
+	i.appendChild(document.createTextNode("account_circle"));
 
-			console.log("signed out");
-		}
+	a.appendChild(i);
+	myNode.appendChild(a);
 
-	});
+	console.log("signed out");
+
+	$("#div_main_info").load("/html-elements/sign-in-form.html");
+
+}
+
+});
 
 }
 
