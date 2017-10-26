@@ -60,6 +60,23 @@ function writeUserData(userId, name, surname, age="Not specified", gender="Not s
   });
 }
 
+function getDataAndSaveUserData() {
+
+  var name = document.getElementById("input_name").value;
+  var surname = document.getElementById("input_surname").value;
+  var age = document.getElementById("input_age").value;
+  var gender = document.getElementById("input_gender").value;
+  var phone = document.getElementById("input_phone").value;
+  var country = document.getElementById("input_country").value;
+  var province = document.getElementById("input_province").value;
+  var street = document.getElementById("input_street").value;
+  var number = document.getElementById("input_number").value;
+  var likings = document.getElementById("input_liking").value;
+
+  writeUserData(firebase.auth().currentUser.uid, name, surname, age, gender, phone, country, province, street, number, likings, firebase.auth().currentUser.photoURL);
+
+}
+
 function createUser() {
 
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -116,7 +133,7 @@ function initSpecialAuthentication() {
       console.log("Signed in user(photoURL): " + photoURL);
       // ...
       Materialize.toast('Signed in succesfully!', 2000, 'rounded');
-      database();
+      //database();
 
 
       //writeUserData(userId, "Francesco", "Silvetti", "17", "Male", "3513476196", "Obispo Moscoso y Peralta", "2971", "Comedy", firebase.auth().currentUser.photoURL);
@@ -214,9 +231,7 @@ function database() {
     });
 
     dbRefObject.on('child_changed', snap => {
-      const changed_input = document.getElementById(snap.key);
-      changed_input.setAttribute("value", snap.val());
-      console.log(snap.value);
+
     });
 
     dbRefObject.on('child_removed', snap => {
