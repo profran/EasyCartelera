@@ -44,7 +44,7 @@ function mygoogle() {
 
 }
 
-function writeUserData(userId, name, surname, age="Not specified", gender="Not specified", phone="Not specified", country, province, street="Not specified", number="Not specified", likings="Not specified", photo="Not specified") {
+function writeUserData(userId, name, surname, age="Not specified", gender="Not specified", phone="Not specified", country="Not specified", province="Not specified", street="Not specified", number="Not specified", likings="Not specified", photo="Not specified") {
   firebase.database().ref("/users/" + userId).set({
     name: name,
     surname: surname,
