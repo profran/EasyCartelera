@@ -19,7 +19,7 @@ function pushNewCinema() {
   var long = input_long.value;
   var city = input_city.value;
 
-  pushToDatabase(createNewCinema(name, desc, dire, lat, long, city));
+  pushToDatabase(createNewCinema(name, desc, rating, dire, lat, long, city));
 
   console.log(newCinema + " was pushed");
 
@@ -32,9 +32,9 @@ function pushNewCinema() {
 
 }
 
-function createNewCinema(name, desc="null", direc="", lat="", long="", city="") {
+function createNewCinema(name, desc="null", rating=0, direc="", lat="", long="", city="") {
 
-  var newCinema = {"name" : name, "desc" : desc, "direc" : direc, "lat" : lat, "long" : long, "city" : city};
+  var newCinema = {"name" : name, "desc" : desc, "rating" : rating, "direc" : direc, "lat" : lat, "long" : long, "city" : city};
   return newCinema;
 
 }
@@ -58,10 +58,9 @@ function initialize(lat=-31.4112551, long=-64.1888339) {
     zoom: 15
   });
 
-
   var request = {
     location: location,
-    radius: "500",
+    radius: "50",
     query: "cinema"
   };
 
@@ -73,7 +72,8 @@ function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
       var place = results[i];
-      pushToDatabase(createNewCinema(place.name, "null", place.formatted_address, place.lat, place.lng, "Cordoba"));
+      console.log(place);
+      pushToDatabase(createNewCinema(place.name, "null", place.rating, place.formatted_address, place.geometry.viewport.f.b, place.geometry.viewport.b.b, "Cordoba"));
     }
   }
 }

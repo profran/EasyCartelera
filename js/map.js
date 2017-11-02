@@ -1,5 +1,5 @@
-var map
-var actual_JSON
+var map;
+var actual_JSON;
 
 function myMap() {
 
@@ -23,12 +23,12 @@ function addMarkersFromList(LatLngList) {
 
 }
 
-function addMarker(Lat, Lng) {
+function addMarker(title, Lat, Lng) {
 
 	var marker = new google.maps.Marker({
     	position: new google.maps.LatLng(Lat,Lng),
     	map: map,
-    	title: 'Hello World!'
+    	title: title
   	});
 
 }
