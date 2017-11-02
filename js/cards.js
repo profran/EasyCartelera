@@ -1,4 +1,4 @@
-function createVerticalCard(title="", description = "", link = "#", image = "") {
+function createVerticalCard(title="", description = "", link = "#", image = "media/logoDinosaurio.jpg") {
 
 	var card = document.createElement("div");
 	card.setAttribute("id", ("div_card_" + title.split(' ').join('_')));
