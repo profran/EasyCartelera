@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 function database() {
 
-  const dbRefObject  = firebase.database().ref('/cities/Cordoba');
+  const dbRefObject  = firebase.database().ref('/cities/Cordoba/cinemas');
 
   //dbRefObject.on('value', snap => console.log(Object.values(snap.val())));
   dbRefObject.on('value', snap => {
@@ -58,7 +58,7 @@ dbRefObject.on('child_removed', snap => {
 function setMarkers(snap) {
 
   snap.forEach(function(snaps) {
-    console.log(snaps.val());
+    console.log(snaps);
     addMarker(snaps.val().name, snaps.val().lat, snaps.val().long, (snaps.val().name + ", Rating: " + snaps.val().rating));
   });
 
@@ -83,7 +83,6 @@ function removeMarkers(markerList) {
 function setCards(snap) {
 
   snap.forEach(function(snaps) {
-    console.log(snaps.val());
     createVerticalCard(snaps.val().name,snaps.val().desc);
   });
 

@@ -41,7 +41,7 @@ function createNewCinema(name, desc="null", rating=0, direc="", lat="", long="",
 
 function pushToDatabase(cinema) {
 
-  var myRef = databaseRef.ref("/cities/Cordoba");
+  var myRef = databaseRef.ref("/cities/Cordoba/cinemas");
   myRef.push(cinema);
   console.log("succesfully pushed " + cinema.name);
 
@@ -77,3 +77,22 @@ function callback(results, status) {
     }
   }
 }
+
+
+//##########################################################################################################
+
+function pushNewMovies() {
+
+  var get;
+
+  theMovieDb.movies.getNowPlaying({}, function(get){
+
+    var movies = JSON.parse(get);
+
+    console.log(movies.results);
+
+for (var i = 0; i < movies.results.length; i++) {
+  console.log(movies.results[i].title);
+}
+
+  }, function(get){console.error("Error while getting movies");});}
