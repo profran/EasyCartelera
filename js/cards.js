@@ -1,4 +1,4 @@
-function createInfoCard(title="example", description = "", link = "#", image = "media/logoDinosaurio.jpg") {
+function createVerticalCard(title="", description = "", link = "#", image = "media/logoDinosaurio.jpg") {
 
 	var card = document.createElement("div");
 	card.setAttribute("id", ("div_card_" + title.split(' ').join('_')));
@@ -41,3 +41,12 @@ function createInfoCard(title="example", description = "", link = "#", image = "
 	document.getElementById("div_card_column").appendChild(card);
 
 }
+/*
+function createVerticalCard(destination_id, {hoverable = true, card_image = null, card_title, card_description = null, card_url = null}) {
+
+	//var destination_element = document.getElementById(destination_element);
+	$("#" + destination_id).load('vertical-card.html');
+
+
+}
+*/
