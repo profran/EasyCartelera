@@ -9,6 +9,7 @@ initAuthentication();
 $(document).ready(function() {
 
   database();
+  $("#preloader").remove();
 
 });
 
