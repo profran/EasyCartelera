@@ -64,6 +64,8 @@ function initAuthentication() {
 				myNode.appendChild(a);
 
 				console.log("photo change successful");
+				sideNav(firebase.auth().currentUser);
+				$(".button-collapse").sideNav();
 
 			} else {
 
@@ -111,5 +113,58 @@ function initAuthentication() {
 		}
 
 	});
+
+}
+
+function sideNav(user) {
+
+	var nav_bar = document.getElementById("nav-bar");
+
+	var ul = document.createElement("ul");
+	ul.setAttribute("class", "side-nav");
+	ul.setAttribute("id", "mobile-demo");
+
+	var li_user_view = document.createElement("li");
+
+	var div_user_view = document.createElement("div");
+	div_user_view.setAttribute("class", "user-view");
+
+	var div_background = document.createElement("div");
+	div_background.setAttribute("class", "background");
+
+	var img_background = document.createElement("img");
+	img_background.setAttribute("src", "media/office.jpg");
+
+	var a_user = document.createElement("a");
+	a_user.setAttribute("href", "account.html");
+
+	var img_user = document.createElement("img");
+	img_user.setAttribute("class", "circle");
+	img_user.setAttribute("src", user.photoURL);
+
+	var a_name = document.createElement("a");
+
+	var span_name = document.createElement("span");
+	span_name.setAttribute("class", "white-text name");
+	span_name.appendChild(document.createTextNode(user.displayName));
+
+	var a_email = document.createElement("a");
+
+	var span_email = document.createElement("span");
+	span_email.setAttribute("class", "white-text email");
+	span_email.appendChild(document.createTextNode(user.email));
+
+	div_user_view.appendChild(div_background);
+	div_background.appendChild(img_background);
+	div_user_view.appendChild(a_user);
+	div_user_view.appendChild(a_name);
+	div_user_view.appendChild(a_email);
+	a_user.appendChild(img_user);
+	a_name.appendChild(span_name);
+	a_email.appendChild(span_email);
+	ul.appendChild(li_user_view);
+	li_user_view.appendChild(div_user_view);
+
+	nav_bar.appendChild(ul);
 
 }

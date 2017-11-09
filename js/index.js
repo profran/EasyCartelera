@@ -59,7 +59,6 @@ dbRefObject.on('child_removed', snap => {
 function setMarkers(snap) {
 
   snap.forEach(function(snaps) {
-    console.log(snaps);
     addMarker(snaps.val().name, snaps.val().lat, snaps.val().long, (snaps.val().name + ", Rating: " + snaps.val().rating));
   });
 
@@ -72,12 +71,12 @@ function removeMarkers(markerList) {
   /*
   for (markerList) {
 
-    marker[0].setMap(null);
+  marker[0].setMap(null);
 
-  }
-  */
+}
+*/
 
-  markers = [];
+markers = [];
 
 }
 

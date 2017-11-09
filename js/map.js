@@ -27,8 +27,6 @@ function addMarkersFromList(LatLngList) {
 
 function addMarker(title, Lat, Lng, desc="", link="#") {
 
-  console.log("mapa");
-
   var contentString = '<div id="content">'+
   '<div id="siteNotice">'+
   '</div>'+
