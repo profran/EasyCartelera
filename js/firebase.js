@@ -11,7 +11,7 @@ function signOut(argument) {
 
 	firebase.auth().signOut().then(function() {
 		// Sign-out successful.
-		Materialize.toast('Signed out succesfully!', 2000, 'rounded');
+		M.toast({html:'Signed out succesfully!', classes : 'rounded'});
 
 	}).catch(function(error) {
 		// An error happened.
@@ -65,7 +65,6 @@ function initAuthentication() {
 
 				console.log("photo change successful");
 				sideNav(firebase.auth().currentUser);
-				$(".button-collapse").sideNav();
 
 			} else {
 
@@ -121,7 +120,7 @@ function sideNav(user) {
 	var nav_bar = document.getElementById("nav-bar");
 
 	var ul = document.createElement("ul");
-	ul.setAttribute("class", "side-nav");
+	ul.setAttribute("class", "sidenav");
 	ul.setAttribute("id", "mobile-demo");
 
 	var li_user_view = document.createElement("li");
@@ -166,5 +165,8 @@ function sideNav(user) {
 	li_user_view.appendChild(div_user_view);
 
 	nav_bar.appendChild(ul);
+
+	$(".button-collapse").sidenav();
+	$('.sidenav').sidenav();
 
 }

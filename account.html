@@ -12,28 +12,27 @@
   <link rel="shortcut icon" href="media/movie.png">
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <meta http-equiv="expires" content="0">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta http-equiv="Pragma" CONTENT="no-cache"> -->
 </head>
 <body>
   <ul id="account-dropdown" class="dropdown-content">
     <li><a href="account.html">Profile</a></li>
     <li><a href="#!" onclick="signOut()">Sign out</a></li>
   </ul>
-  <nav>
-    <div id="nav-bar" class="nav-wrapper teal darken-3">
-      <a href="home.html" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li id="li_movie_list"><a href="movieList.html"><i class="material-icons icon-white" style="font-size: 40px">format_list_bulleted</i></a></li>
-        <li id="li_map"><a href="index.html"><i class="material-icons icon-white" style="font-size: 40px">map</i></a></li>
-        <li id="li_home"><a href="home.html"><i class="material-icons icon-white" style="font-size: 40px">home</i></a></li>
-        <li><a class="dropdown-button" href="#" data-activates="account-dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li id="li_account"><a href="#"><i class="material-icons icon-white" style="font-size: 40px">account_circle</i></a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav>
+      <div id="nav-bar" class="nav-wrapper">
+        <a href="home.html" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li id="li_movie_list"><a href="#"><i class="material-icons icon-white" style="font-size: 40px">format_list_bulleted</i></a></li>
+          <li id="li_map"><a href="index.html"><i class="material-icons icon-white" style="font-size: 40px">map</i></a></li>
+          <li id="li_home"><a href="home.html"><i class="material-icons icon-white" style="font-size: 40px">home</i></a></li>
+          <li><a class="dropdown-button" href="#" data-activates="account-dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li id="li_account"><a href="account.html"><i class="material-icons icon-white" style="font-size: 40px">account_circle</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <div id="div_main_grid" class="grid">
     <div id="div_main_info" class="row" style="height: 100%">
     </div>

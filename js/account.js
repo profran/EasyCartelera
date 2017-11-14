@@ -132,7 +132,8 @@ function initSpecialAuthentication() {
       console.log("Signed in user(email): " + email);
       console.log("Signed in user(photoURL): " + photoURL);
       // ...
-      Materialize.toast('Signed in succesfully!', 2000, 'rounded');
+      //M.toast({'Signed in succesfully!', 2000, 'rounded');
+      M.toast({html: "Signed in succesfully!", classes: 'rounded'});
       //database();
 
 

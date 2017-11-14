@@ -30,7 +30,7 @@ i.icon-white {
 }
 
 .scrollToTop{
-	width:100px; 
+	width:100px;
 	height:130px;
 	padding:10px;
 	text-align:center;
@@ -65,6 +65,10 @@ i.icon-white {
 
 #topBtn:hover {
 	background-color: #555;
+}
+
+#nav-bar {
+	background-color: rgb(16, 169, 141);
 }
 
 .grid {

@@ -139,7 +139,8 @@ function createParallaxes(snap) {
     img.setAttribute("src", ("https://image.tmdb.org/t/p/w1000" + snaps.val().backdrop_path));
 
     var whiteSection = document.createElement("div");
-    whiteSection.setAttribute("class", "section teal darken-1");
+    whiteSection.setAttribute("class", "section");
+    whiteSection.setAttribute("style", "background-color:black;")
 
     var row = document.createElement("div");
     row.setAttribute("class", "row container");
@@ -149,7 +150,7 @@ function createParallaxes(snap) {
     h2.appendChild(document.createTextNode(snaps.val().title));
 
     var p = document.createElement("p");
-    p.setAttribute("class", "grey-text text-darken-3 lighten-3");
+    p.setAttribute("class", "white-text");
     p.appendChild(document.createTextNode(snaps.val().overview));
 
     parallax.appendChild(img);
