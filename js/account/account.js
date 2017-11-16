@@ -1,3 +1,10 @@
+$(document).ready(function() {
+
+  initializeFirebase();
+  initSpecialAuthentication();
+
+});
+
 function signIn() {
 
   signOut();
@@ -169,7 +176,6 @@ function initSpecialAuthentication() {
       M.toast({html: "Signed in succesfully!", classes: 'rounded'});
       database();
 
-
       //writeUserData(userId, "Francesco", "Silvetti", "17", "Male", "3513476196", "Obispo Moscoso y Peralta", "2971", "Comedy", firebase.auth().currentUser.photoURL);
       $("#div_main_info").load("/html-elements/profile.html");
 
@@ -239,7 +245,7 @@ function initSpecialAuthentication() {
 
       console.log("signed out");
 
-      $("#div_main_info").load("/html-elements/sign-in-form.html");
+      $("#div_main_info").load("../html-elements/sign-in-form.html");
 
     }
 
@@ -290,6 +296,3 @@ function database() {
     });
   }
 }
-
-initializeFirebase();
-initSpecialAuthentication();

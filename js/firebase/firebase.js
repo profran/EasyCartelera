@@ -117,7 +117,7 @@ function initAuthentication() {
 
 function sideNav(user) {
 
-	var nav_bar = document.getElementById("nav-bar");
+	var nav_bar = document.getElementById("nav-bar-container");
 
 	var ul = document.createElement("ul");
 	ul.setAttribute("class", "sidenav");
@@ -132,7 +132,7 @@ function sideNav(user) {
 	div_background.setAttribute("class", "background");
 
 	var img_background = document.createElement("img");
-	img_background.setAttribute("src", "media/office.jpg");
+	img_background.setAttribute("src", "../media/office.jpg");
 
 	var a_user = document.createElement("a");
 	a_user.setAttribute("href", "account.html");
@@ -166,7 +166,7 @@ function sideNav(user) {
 
 	nav_bar.appendChild(ul);
 
-	$(".button-collapse").sidenav();
+	//$(".button-collapse").sidenav();
 	$('.sidenav').sidenav();
 
 }
