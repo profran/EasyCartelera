@@ -1,7 +1,7 @@
 initializeFirebase();
 initAuthentication();
 
-window.onscroll = function() {scrollFunction()};
+//window.onscroll = function() {scrollFunction()};
 
 
 $(document).ready(function() {

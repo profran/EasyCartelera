@@ -2,6 +2,7 @@ $.get("../html-elements/nav-bar.html", function (data) {
 
   $(document.body).prepend(data);
   $('.sidenav').sidenav();
+  $(".dropdown-trigger").dropdown();
   //buildSideNav();
 
 });
