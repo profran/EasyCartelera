@@ -1,9 +1,3 @@
-
-/*
-* {
-border: 1px solid red !important;
-}
-*/
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -16,6 +10,7 @@ html {
 	height: 100vh;
 	max-height: 100%;
 	margin: 0;
+	background-color:rgb(66, 196, 172);
 }
 
 body {
@@ -27,25 +22,6 @@ body {
 
 i.icon-white {
 	color: white;
-}
-
-.scrollToTop{
-	width:100px; 
-	height:130px;
-	padding:10px;
-	text-align:center;
-	background: whiteSmoke;
-	font-weight: bold;
-	color: #444;
-	text-decoration: none;
-	position:fixed;
-	top:75px;
-	right:40px;
-	display:none;
-	background: url('arrow_up.png') no-repeat 0px 20px;
-}
-.scrollToTop:hover{
-	text-decoration:none;
 }
 
 #topBtn {
@@ -67,15 +43,11 @@ i.icon-white {
 	background-color: #555;
 }
 
-.grid {
-	/*
-	border: 1px solid blue !important;
-	*/
-	margin: 0;
-	width: 100%;
-	max-height: inherit;
-	height: calc(100% - 64px);
+<<<<<<< HEAD
+#nav-bar {
+	background-color: rgb(16, 169, 141);
 }
+
 
 .row {
 	display: flex;

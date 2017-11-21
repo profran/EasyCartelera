@@ -11,14 +11,13 @@ function signOut(argument) {
 
 	firebase.auth().signOut().then(function() {
 		// Sign-out successful.
-		Materialize.toast('Signed out succesfully!', 2000, 'rounded');
+		M.toast({html:'Signed out succesfully!', classes : 'rounded'});
 
 	}).catch(function(error) {
 		// An error happened.
 	});
 
 }
-
 function initializeFirebase() {
 
 	firebase.initializeApp(config);
@@ -42,6 +41,8 @@ function initAuthentication() {
 			console.log("Signed in user(email): " + email);
 			console.log("Signed in user(photoURL): " + photoURL);
 			// ...
+
+			updateSideNav(user);
 
 			if (photoURL != null) {
 
@@ -108,6 +109,9 @@ function initAuthentication() {
 			myNode.appendChild(a);
 
 			console.log("signed out");
+
+			defaultSideNav();
+
 		}
 
 	});

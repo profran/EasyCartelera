@@ -22,7 +22,6 @@ function database() {
 
     removeMarkers(markers);
     setMarkers(snap);
-    setCards(snap);
 
     /*
     for (var snaps in snap.val()) {
@@ -59,28 +58,30 @@ dbRefObject.on('child_removed', snap => {
 function setMarkers(snap) {
 
   snap.forEach(function(snaps) {
-    console.log(snaps);
     addMarker(snaps.val().name, snaps.val().lat, snaps.val().long, (snaps.val().name + ", Rating: " + snaps.val().rating));
   });
 
 }
 
 function removeMarkers(markerList) {
+
+  $("#div_card_column").empty();
+
   for (var i = 0; i < markerList.length; i++) {
     markerList[i][0].setMap(null);
   }
   /*
   for (markerList) {
 
-    marker[0].setMap(null);
-
-  }
-  */
-
-  markers = [];
+  marker[0].setMap(null);
 
 }
+*/
 
+markers = [];
+
+}
+/*
 function setCards(snap) {
 
   snap.forEach(function(snaps) {
@@ -88,3 +89,4 @@ function setCards(snap) {
   });
 
 }
+*/

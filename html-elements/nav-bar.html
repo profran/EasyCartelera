@@ -1,0 +1,43 @@
+<!--########## This is a nav-bar ##########-->
+<div id="nav-bar-container">
+  <ul id="account-dropdown" class="dropdown-content">
+    <li><a href="account.html">Profile</a></li>
+    <li><a href="#!" onclick="signOut()">Sign out</a></li>
+  </ul>
+  <ul id="side-account-dropdown" class="dropdown-content">
+    <li><a href="account.html">Profile</a></li>
+    <li><a href="#!" onclick="signOut()">Sign out</a></li>
+  </ul>
+  <div class="navbar-fixed">
+    <nav>
+      <div id="nav-bar" class="nav-wrapper">
+        <a href="home.html" class="brand-logo"><i class="material-icons icon-white" style="font-size: 50px">local_movies</i></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li id="li_movie_list"><a href="../template/movieList.html"><i class="material-icons icon-white" style="font-size: 40px">format_list_bulleted</i></a></li>
+          <li id="li_map"><a href="../template/index.html"><i class="material-icons icon-white" style="font-size: 40px">map</i></a></li>
+          <li id="li_home"><a href="../template/home.html"><i class="material-icons icon-white" style="font-size: 40px">home</i></a></li>
+          <li><a class="dropdown-trigger" href="#" data-target="account-dropdown">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li id="li_account"><a href="../template/account.html"><i class="material-icons icon-white" style="font-size: 40px">account_circle</i></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="../media/office.jpg">
+        </div>
+        <a href="../template/account.html"><img class="circle" id="side-nav-user-img" src="../media/icons/account.png"></a>
+        <a><span id="side-nav-user-name" class="white-text name">Guest user</span></a>
+        <a><span id="side-nav-user-email" class="white-text email">Log in for more features</span></a>
+      </div>
+    </li>
+    <li id="li_side_movie_list"><a href="../template/movieList.html"><i class="material-icons icon-white left" style="font-size: 20px">format_list_bulleted</i>Movie list</a></li>
+    <li id="li_side_map"><a href="../template/index.html"><i class="material-icons icon-white left" style="font-size: 20px">map</i>Map</a></li>
+    <li id="li_side_home"><a href="../template/home.html"><i class="material-icons icon-white left" style="font-size: 20px">home</i>Home</a></li>
+    <li><a class="dropdown-trigger" href="#" data-target="side-account-dropdown"><i class="material-icons icon-white left" style="font-size: 20px">account_circle</i>Account<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+</div>
+<!--########## ()()()()()() ##########-->

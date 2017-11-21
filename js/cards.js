@@ -1,4 +1,4 @@
-function createVerticalCard(title="", description = "", link = "#", image = "media/logoDinosaurio.jpg") {
+function createVerticalCard(title="", description = "", link = "#", image = "https://as1.ftcdn.net/jpg/01/43/94/90/500_F_143949068_n4vvwk28JsWaL1WEr3vpaVuJWLzrOsB1.jpg") {
 
 	var card = document.createElement("div");
 	card.setAttribute("id", ("div_card_" + title.split(' ').join('_')));
@@ -40,6 +40,8 @@ function createVerticalCard(title="", description = "", link = "#", image = "med
 
 	document.getElementById("div_card_column").appendChild(card);
 
+	return card;
+
 }
 /*
 function createVerticalCard(destination_id, {hoverable = true, card_image = null, card_title, card_description = null, card_url = null}) {
@@ -49,4 +51,3 @@ function createVerticalCard(destination_id, {hoverable = true, card_image = null
 
 
 }
-*/

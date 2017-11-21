@@ -18,7 +18,8 @@
       </div>
       <div class="row">
         <!--<div class="col s4">-->
-        <a class="waves-effect waves-light btn black-text grey lighten-4" onclick="signIn()">Sign in</a>
+        <a class="waves-effect waves-light btn" onclick="signIn()">Sign in</a>
+        <a class="waves-effect waves-light btn" onclick="register()">Register</a>
         <!--</div>-->
       </div>
       <div class="divider" style="margin-bottom: 3%;"></div>
@@ -28,7 +29,7 @@
           " alt="Contact Person">
           Google +
         </div>
-        <div class="chip hoverable" href="https://github.com/login/oauth/authorize?scope=user:email&client_id=<%= client_id %>">
+        <div class="chip hoverable" onclick="mygithub()">
           <img src="https://assets-cdn.github.com/favicon.ico" alt="Contact Person">
           GitHub
         </div>
