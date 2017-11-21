@@ -56,6 +56,15 @@ function addMarker(title, Lat, Lng, desc="", link="#") {
 
   markers.push([marker, infowindow]);
 
+  var card = createVerticalCard(title, desc);
+
+  $(card).mouseenter(function() {
+    infowindow.open(map,marker);
+  }).mouseleave(function() {
+    infowindow.close();
+  });
+
+
 }
 /*
 function loadJSON(callback) {

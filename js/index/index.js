@@ -22,7 +22,6 @@ function database() {
 
     removeMarkers(markers);
     setMarkers(snap);
-    setCards(snap);
 
     /*
     for (var snaps in snap.val()) {
@@ -65,6 +64,9 @@ function setMarkers(snap) {
 }
 
 function removeMarkers(markerList) {
+
+  $("#div_card_column").empty();
+
   for (var i = 0; i < markerList.length; i++) {
     markerList[i][0].setMap(null);
   }
@@ -79,7 +81,7 @@ function removeMarkers(markerList) {
 markers = [];
 
 }
-
+/*
 function setCards(snap) {
 
   snap.forEach(function(snaps) {
@@ -87,3 +89,4 @@ function setCards(snap) {
   });
 
 }
+*/

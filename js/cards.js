@@ -1,4 +1,4 @@
-function createVerticalCard(title="", description = "", link = "#", image = "media/logoDinosaurio.jpg") {
+function createVerticalCard(title="", description = "", link = "#", image = "https://as1.ftcdn.net/jpg/01/43/94/90/500_F_143949068_n4vvwk28JsWaL1WEr3vpaVuJWLzrOsB1.jpg") {
 
 	var card = document.createElement("div");
 	card.setAttribute("id", ("div_card_" + title.split(' ').join('_')));
@@ -39,6 +39,8 @@ function createVerticalCard(title="", description = "", link = "#", image = "med
 	card.appendChild(card_action);
 
 	document.getElementById("div_card_column").appendChild(card);
+
+	return card;
 
 }
 /*

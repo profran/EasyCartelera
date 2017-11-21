@@ -15,11 +15,24 @@ admin.initializeApp(functions.config().firebase);
 exports.addAccount = functions.auth.user().onCreate(event => {
   const user = event.data; // The firebase user
   const id = user.uid;
-  const displayName = user.displayName;
-  const photoURL = user.photoURL;
 
   try {
 
+    var photoURL = user.photoURL;
+
+  } catch (e) {
+
+    var photoURL = "Not specified";
+
+  } finally {
+
+    var photoURL = "Not specified";
+
+  }
+
+  try {
+
+    const displayName = user.displayName;
     var name = displayName.split(" ")[0];
     var surname = displayName.split(" ")[1];
 

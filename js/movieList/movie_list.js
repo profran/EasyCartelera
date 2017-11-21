@@ -9,20 +9,22 @@ $(document).ready(function() {
   parallaxLatest();
   $('.parallax').parallax();
 
+  /*
   //Check to see if the window is top if not then display button
   $(window).scroll(function(){
-    if ($(this).scrollTop() > 100) {
-      $('.scrollToTop').fadeIn();
-    } else {
-      $('.scrollToTop').fadeOut();
-    }
-  });
+  if ($(this).scrollTop() > 100) {
+  $('.scrollToTop').fadeIn();
+} else {
+$('.scrollToTop').fadeOut();
+}
+});
 
-  //Click event to scroll to top
-  $('.scrollToTop').click(function(){
-    $('html, body').animate({scrollTop : 0},800);
-    return false;
-  });
+//Click event to scroll to top
+$('.scrollToTop').click(function(){
+$('html, body').animate({scrollTop : 0},800);
+return false;
+});
+*/
 
 });
 
@@ -128,6 +130,7 @@ function createParallaxes(snap) {
 
     var mainDiv = document.createElement("div");
     mainDiv.setAttribute("id", snaps.val().id);
+    //mainDiv.setAttribute("class", "col s12 m12 l12")
 
     var parallax_container = document.createElement("div");
     parallax_container.setAttribute("class", "parallax-container");
@@ -149,9 +152,16 @@ function createParallaxes(snap) {
     h2.setAttribute("class", "header white-text");
     h2.appendChild(document.createTextNode(snaps.val().title));
 
+    var col = document.createElement("div");
+    col.setAttribute("class", "col s8 m9 l10")
+
     var p = document.createElement("p");
     p.setAttribute("class", "white-text");
     p.appendChild(document.createTextNode(snaps.val().overview));
+
+    var a = document.createElement("a");
+    a.setAttribute("href", ("https://www.themoviedb.org/movie/" + String(snaps.val().id)));
+    a.appendChild(document.createTextNode("https://www.themoviedb.org/movie/" + String(snaps.val().id)));
 
     parallax.appendChild(img);
 
@@ -160,7 +170,11 @@ function createParallaxes(snap) {
     whiteSection.appendChild(row);
 
     row.appendChild(h2);
-    row.appendChild(p);
+
+    col.appendChild(p);
+    col.appendChild(a);
+
+    row.appendChild(col);
 
     mainDiv.appendChild(parallax_container);
     mainDiv.appendChild(whiteSection);
