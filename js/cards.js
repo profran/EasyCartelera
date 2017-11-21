@@ -51,4 +51,3 @@ function createVerticalCard(destination_id, {hoverable = true, card_image = null
 
 
 }
-*/
