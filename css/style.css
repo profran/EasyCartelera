@@ -43,11 +43,19 @@ i.icon-white {
 	background-color: #555;
 }
 
-<<<<<<< HEAD
 #nav-bar {
 	background-color: rgb(16, 169, 141);
 }
 
+.grid {
+	/*
+	border: 1px solid blue !important;
+	*/
+	margin: 0;
+	width: 100%;
+	max-height: inherit;
+	height: calc(100% - 64px);
+}
 
 .row {
 	display: flex;
