@@ -83,7 +83,7 @@ function callback(results, status) {
 
 function pushNewMovies() {
 
-  var dbRefObject = firebase.database().ref("/movies/latest");
+  var dbRefObject = firebase.database().ref();
 
   var get;
 
@@ -95,8 +95,18 @@ function pushNewMovies() {
 
     for (var i = 0; i < movies.results.length; i++) {
       //var data = {"title" : movies.results[i].title, "image" : ("https://image.tmdb.org/t/p/w1920" + movies.results[i].backdrop_path)}
-      dbRefObject.push(movies.results[i]);
-      console.log("succesfully pushed: " + movies.results[i]);
+      var newMovieKey = firebase.database().ref().push().key;
+
+      movie = movies.results[i];
+      movie.key = newMovieKey;
+
+      var updates = {};
+
+      updates['movies/latest/' + newMovieKey ] = movie;
+
+      dbRefObject.update(updates);
+
+      console.log("succesfully pushed: " + movie);
     }
 
   }, function(get){console.error("Error while getting movies");});}

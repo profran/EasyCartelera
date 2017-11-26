@@ -1,0 +1,16 @@
+.title {
+  text-align: center;
+}
+
+.no-right-padding {
+  padding-right: 0px;
+}
+
+.white-background {
+  background-color: white;
+  height: auto;
+}
+
+.material-icons {
+  color: #6d60acff;
+}

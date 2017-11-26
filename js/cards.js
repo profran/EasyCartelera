@@ -1,4 +1,4 @@
-function createVerticalCard(title="", description = "", link = "#", image = "https://as1.ftcdn.net/jpg/01/43/94/90/500_F_143949068_n4vvwk28JsWaL1WEr3vpaVuJWLzrOsB1.jpg") {
+function createVerticalCard(title="", description = "", link = "#", image = "http://www.soundcheck-uk.com/images/photos/cinema-blue-400.jpg") {
 
 	var card = document.createElement("div");
 	card.setAttribute("id", ("div_card_" + title.split(' ').join('_')));
@@ -9,6 +9,7 @@ function createVerticalCard(title="", description = "", link = "#", image = "htt
 
 	var img = document.createElement("img");
 	img.setAttribute("src", image);
+	img.setAttribute("class", "responsive-img");
 
 	var card_title = document.createElement("span");
 	card_title.setAttribute("class", "card-title");
