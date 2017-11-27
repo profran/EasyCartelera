@@ -10,7 +10,8 @@ html {
 	height: 100vh;
 	max-height: 100%;
 	margin: 0;
-	background-color:rgb(66, 196, 172);
+	color: #fafafa;
+	background: linear-gradient(50deg, #6d60acff, #10d8b4ff);
 }
 
 body {
@@ -44,7 +45,7 @@ i.icon-white {
 }
 
 #nav-bar {
-	background-color: rgb(16, 169, 141);
+	background: linear-gradient(50deg, #6d60acff, #10d8b4ff);
 }
 
 .grid {
@@ -102,6 +103,20 @@ i.icon-white {
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
+}
+
+.img-comment {
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+}
+
+.gradient {
+	background: linear-gradient(50deg, #6d60acff, #10d8b4ff);
+}
+
+.reverse-gradient {
+	background: linear-gradient(50deg, #10d8b4ff, #6d60acff);
 }
 
 #map {
