@@ -10,21 +10,21 @@
 
   - Movie list: In this page you can easily visualize the latest movies. Yo can also comment on each new movie.
 
-  ![Screenshot](media/screenshots/movie_list.png)
+  ![Screenshot](media/screenshots/movie_list.PNG)
 
   - Interactive map: Here you can see all the cinemas around you. The page will center the map on your location so you can see the nearest ones.
 
-  ![Screenshot](media/screenshots/index.png)
+  ![Screenshot](media/screenshots/index.PNG)
 
   - Home: This is a landing page.
 
-  ![Screenshot](media/screenshots/home.png)
+  ![Screenshot](media/screenshots/home.PNG)
 
   - Account (or login): In this sub-page, you can easily manage your account information.
 
   ![Screenshot](media/screenshots/account.png)
 
-  ![Screenshot](media/screenshots/login.png)
+  ![Screenshot](media/screenshots/login.PNG)
 
 #### Developer:
 
